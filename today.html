@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Today Schedule</title>
+</head>
+<body>
+  <h2>Today Schedule</h2>
+
+  <label>Morning Tasks:</label><br>
+  <textarea id="morning" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your morning task"></textarea><br><br>
+
+  <label>Afternoon Tasks:</label><br>
+  <textarea id="afternoon" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your afternoon task"></textarea><br><br>
+
+  <label>Evening Tasks:</label><br>
+  <textarea id="evening" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your evening task"></textarea><br><br>
+
+  <button onclick="saveTask()">Save</button>
+
+  <script>
+  
+    function saveTask() {
+      const morning = document.getElementById("morning").value;
+      const afternoon = document.getElementById("afternoon").value;
+      const evening = document.getElementById("evening").value;
+
+      localStorage.setItem("morningTasks", morning);
+      localStorage.setItem("afternoonTasks", afternoon);
+      localStorage.setItem("eveningTasks", evening);
+
+      alert("Tasks saved!");
+    }
+  window.onload = function() {
+     if(localStorage.getItem("morningTasks"))
+     document.getElementById("morning").value = localStorage.getItem("morningTasks");
+   if(localStorage.getItem("afternoonTasks"))
+        document.getElementById("afternoon").value = localStorage.getItem("afternoonTasks");
+       if(localStorage.getItem("eveningTasks"))
+          document.getElementById("evening").value = localStorage.getItem("eveningTasks");
+      }
+     
+    
+
+  </script>
+</body>
+</html>
