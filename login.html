@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login Here</h2>
+
+  <label>Email:</label>
+  <input type="text" id="email" placeholder="Enter your email"><br><br>
+
+  <label>Password:</label>
+  <input type="password" id="password" placeholder="Enter your password"><br><br>
+
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
+  <p>dont have an account <a href="registor.html">registor here</a>
+
+  <script>
+    function login() {
+      let email = document.getElementById("email").value;
+      let pass = document.getElementById("password").value;
+
+      let savedEmail = localStorage.getItem("useremail");
+      let savedPassword = localStorage.getItem("userpass");
+
+      if (email === savedEmail && pass === savedPassword) {
+        document.getElementById("message").innerText = "Login successful!";
+        window.location.href = "today.html"; 
+      } else {
+        document.getElementById("message").innerText = "Invalid email or password!";
+      }
+    }
+  </script>
+</body>
+            </html>
+
+
+
