@@ -1,39 +1,118 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Login Page</title>
-</head>
-<body>
-  <h2>Login Here</h2>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Login Page</title>
+          
+<style>
+body {
 
-  <label>Email:</label>
-  <input type="text" id="email" placeholder="Enter your email"><br><br>
+    
+   display:flex;            
+    justify-content: center;   
+    align-items: center;
+        min-height: 100vh;
+    margin: 0;
+    background-color: #bfc8f6;
+}
 
-  <label>Password:</label>
-  <input type="password" id="password" placeholder="Enter your password"><br><br>
+.container {
+    border: 2px solid #333;  
+    width: 400px;     
+  
+             
+    border-radius:10px;        
+    background-color: #fff;      
+    text-align: center;
+  
+}
 
-  <button onclick="login()">Login</button>
-  <p id="message"></p>
-  <p>dont have an account <a href="registor.html">registor here</a>
+h2 {
+    color: #e60c0c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
-  <script>
-    function login() {
-      let email = document.getElementById("email").value;
-      let pass = document.getElementById("password").value;
+label {
+    font-weight: bold;
+    color: #9c07f8;
+    margin-bottom: 5px;
+    display: block;
+}
 
-      let savedEmail = localStorage.getItem("useremail");
-      let savedPassword = localStorage.getItem("userpass");
+input[type="text"], input[type="email"], input[type="password"], textarea {
+            
 
-      if (email === savedEmail && pass === savedPassword) {
-        document.getElementById("message").innerText = "Login successful!";
-        window.location.href = "today.html"; 
-      } else {
-        document.getElementById("message").innerText = "Invalid email or password!";
-      }
-    }
-  </script>
-</body>
-            </html>
+    text-align: center;     
+    font-size: 14px;
+    
+
+
+}
+button {
+    padding: 6px 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #0979ea;
+    color: #e3e2e8;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #f4091c;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+p {
+    color: #0c0c0b;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+    <h2>Login Here</h2>
+
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter your email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter your password"><br><br>
+
+    <button onclick="login()">Login</button>
+    <p id="message"></p>
+    <p>dont have an account <a href="registor.html">registor here</a>
+
+    </div>
+    <script>
+        function login() {
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+
+        let savedEmail = localStorage.getItem("useremail");
+        let savedPassword = localStorage.getItem("userpass");
+
+        if (email === savedEmail && pass === savedPassword) {
+            document.getElementById("message").innerText = "Login successful!";
+            window.location.href = "today.html"; 
+        } else {
+            document.getElementById("message").innerText = "Invalid email or password!";
+        }
+        }
+    </script>
+    </body>
+    </html>
+
+
+
+
+
 
 
 
