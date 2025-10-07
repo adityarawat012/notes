@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Logout</title>
+            </head>
+            <body>
+                <h2>logout</h2>
+
+                    <p>u are about to logout</p>
+                        <button onclick ="logout()">Logout</button>
+
+                        <script>
+                            function logout(){
+                                localStorage.removeItem("email");
+                                localStorage.removeItem("password");
+
+                                alert("u have been log out");
+                                window.location.href="login.html";
+                            }
+                            </script>
+                            </body>
+                            </html>
