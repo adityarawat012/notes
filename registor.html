@@ -2,9 +2,81 @@
 <html>
 <head>
     <title>registor form</title>
+   
+<style>
+body {
 
+    
+   display:flex;            
+    justify-content: center;   
+    align-items: center;
+        min-height: 100vh;
+    margin: 0;
+    background-color: #bfc8f6;
+}
+
+.container {
+    border: 2px solid #333;  
+    width: 400px;     
+  
+             
+    border-radius:10px;        
+    background-color: #fff;      
+    text-align: center;
+  
+}
+
+h2 {
+    color: #e60c0c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #9c07f8;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+            
+
+    text-align: center;     
+    font-size: 14px;
+    
+
+
+}
+button {
+    padding: 6px 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #0979ea;
+    color: #e3e2e8;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #f4091c;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+p {
+    color: #0c0c0b;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+</style>
     </head>
     <body>
+        <div class="container">
         <h2>register</h2>
             <label>Email:</label>
                 <input type="text" id="email" placeholder="enter ur email"><br><br>
@@ -13,7 +85,7 @@
                     <button onclick="register()" >Registor</button>
                     <p id="message"></p>
                     <p>Already have an account <a href="login.html">login here</a></p>
-
+</div>
                     <script>
                         function register(){
                      const email=document.getElementById("email").value;
