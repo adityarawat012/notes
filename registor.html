@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>registor form</title>
+
+    </head>
+    <body>
+        <h2>register</h2>
+            <label>Email:</label>
+                <input type="text" id="email" placeholder="enter ur email"><br><br>
+                <label>Password:</label>
+                    <input type="password" id="password" placeholder="enter ur password"><br><br>
+                    <button onclick="register()" >Registor</button>
+                    <p id="message"></p>
+                    <p>Already have an account <a href="login.html">login here</a></p>
+
+                    <script>
+                        function register(){
+                     const email=document.getElementById("email").value;
+                     const  pass=document.getElementById("password").value;
+                      if(email==="" || pass===""){
+                         document.getElementById("message").innerText="please fill all deatails";
+                         return;
+                      }
+                      localStorage.setItem("useremail" ,email);
+                      localStorage.setItem("userpass", pass);
+                      document.getElementById("message").innerText="registration succsfull ! go to login";
+                    }
+
+
+
+                        </script>
+</body>
+</html>
