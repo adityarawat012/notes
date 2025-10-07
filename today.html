@@ -2,20 +2,50 @@
 <html>
 <head>
   <title>Today Schedule</title>
+  <style>
+
+    body{
+      background-color: rgb(245, 245, 248);
+      font-size:10px;
+   
+textarea {
+              
+  border-bottom: 1px dotted black;  
+  outline: none;              
+   background: transparent;          
+}
+    }
+    h2 {
+
+      color: rgb(10, 6, 227);
+      font-size:40px;
+      font-style: italic;
+
+    }
+    button{
+      background-color:blue;
+      display: block;
+     font-size: 16px;
+
+    
+    }
+
+    </style>
+  
 </head>
 <body>
-  <h2>Today Schedule</h2>
+  <h2>Today </h2>
+  
+  
+  <textarea id="morning" style="border:none; border-bottom:1px dotted black; width:30%" placeholder="Write your morning task"></textarea><br><br>
 
-  <label>Morning Tasks:</label><br>
-  <textarea id="morning" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your morning task"></textarea><br><br>
-
-  <label>Afternoon Tasks:</label><br>
   <textarea id="afternoon" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your afternoon task"></textarea><br><br>
 
-  <label>Evening Tasks:</label><br>
   <textarea id="evening" rows="2" style="border:none; border-bottom:1px dotted black; width:30%;" placeholder="Write your evening task"></textarea><br><br>
 
   <button onclick="saveTask()">Save</button>
+
+ 
 
   <script>
   
@@ -42,5 +72,6 @@
     
 
   </script>
+
 </body>
 </html>
